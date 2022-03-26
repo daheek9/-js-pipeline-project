@@ -17,7 +17,7 @@ feature_columns = {
 }
 dataset = (
     pd.read_csv(
-        "winequality-red.csv",
+        "/Users/koodahee/Desktop/barogo/js-pipeline/locust/winequality-red.csv",
         delimiter=",",
     )
     .rename(columns=feature_columns)
