@@ -31,6 +31,11 @@ pipeline {
 				sh "docker-compose up -d"
 			}
 		}
+		stage("modul update") {
+			steps {
+				sh "docker exec -i js-fastapi-monitoring pip install pandas"
+			}
+		}
 		stage("Update model") {
 			steps {
 				sh "docker exec -i js-fastapi-monitoring python train.py"
