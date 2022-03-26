@@ -33,7 +33,7 @@ pipeline {
 		}
 		stage("modul update") {
 			steps {
-				sh "docker exec -i js-fastapi-monitoring pip install pandas"
+				sh "docker exec -i js-fastapi-monitoring pip install -r requirements.txt"
 			}
 		}
 		stage("Update model") {
